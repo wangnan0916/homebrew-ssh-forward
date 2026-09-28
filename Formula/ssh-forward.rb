@@ -5,21 +5,21 @@
 class SshForward < Formula
   desc "Forward Linux development-host ports to localhost through system OpenSSH"
   homepage "https://github.com/wangnan0916/ssh-forward"
-  version "0.10.0"
+  version "0.11.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.10.0/ssh-forward_0.10.0_darwin_amd64.tar.gz"
-      sha256 "e71331fd22903a1fc556e7121b64f1b46261427af924cc68bf9019ecf6c39df5"
+      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.11.0/ssh-forward_0.11.0_darwin_amd64.tar.gz"
+      sha256 "ba5dc77affe36695b2c2e1bbec32979bb687d1262c78cf88b38dcc6206468883"
 
       define_method(:install) do
         bin.install "ssh-forward"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.10.0/ssh-forward_0.10.0_darwin_arm64.tar.gz"
-      sha256 "68229f0f3982cc7cf854d046dfd1bb3c1bd9c8d2590975007e85e68425be1c42"
+      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.11.0/ssh-forward_0.11.0_darwin_arm64.tar.gz"
+      sha256 "61965c6efdd77fcd9d8eea13cb4d6f03857f2f8bfd088733d40ed0e97cb37f27"
 
       define_method(:install) do
         bin.install "ssh-forward"
@@ -29,15 +29,15 @@ class SshForward < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.10.0/ssh-forward_0.10.0_linux_amd64.tar.gz"
-      sha256 "7ea354b291ba83f4ffffe78d9ef8da163144aeb65e35c779b30a6373b610e9da"
+      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.11.0/ssh-forward_0.11.0_linux_amd64.tar.gz"
+      sha256 "6c037ee0b9113d9e5a8b55b0dd7116a4fbab0673608da44824fb8320b7254b3a"
       define_method(:install) do
         bin.install "ssh-forward"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.10.0/ssh-forward_0.10.0_linux_arm64.tar.gz"
-      sha256 "8034c467db6c92aa0b7ff9ca753ff66b9de7359c89d509b45439c8e4466326be"
+      url "https://github.com/wangnan0916/ssh-forward/releases/download/v0.11.0/ssh-forward_0.11.0_linux_arm64.tar.gz"
+      sha256 "9a07766f10c82f742d5bafee604029197be23046d3468cde9635035e28cf04c2"
       define_method(:install) do
         bin.install "ssh-forward"
       end
